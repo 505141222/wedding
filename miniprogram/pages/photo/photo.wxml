@@ -1,0 +1,18 @@
+<!--miniprogram/pages/photo/photo.wxml-->
+<view>
+  <swiper
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+  >
+    <block wx:for="{{swiperImg}}" wx:key='index'>
+      <swiper-item>
+        <image src="{{item.url}}" class="slide-image"  height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view wx:for='{{albumImg}}' wx:key='{{index}}' class='photo-img-wrapper'>
+    <image src='{{item.url}}' mode='aspectFit'></image>
+  </view>
+</view>

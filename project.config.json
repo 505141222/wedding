@@ -1,0 +1,95 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"appid": "wxd5e1213a007967d2",
+	"projectname": "studyCloud",
+	"libVersion": "2.2.5",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 9,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "map",
+					"pathName": "pages/map/map",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "greet",
+					"pathName": "pages/greet/greet",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "message",
+					"pathName": "pages/message/message",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "photo",
+					"pathName": "pages/photo/photo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "manage",
+					"pathName": "pages/manage/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "beManager",
+					"pathName": "pages/beManager/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "chooseManage",
+					"pathName": "pages/chooseManage/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "manageInfo",
+					"pathName": "pages/manageInfo/index"
+				}
+			]
+		}
+	}
+}

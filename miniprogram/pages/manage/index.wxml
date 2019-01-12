@@ -1,0 +1,30 @@
+<!--miniprogram/pages/manage/index.wxml-->
+<view class='manage'>
+  <view class='manage-title'>Banner</view>
+  <view  class='manage-img-wrapper' wx:for='{{bannerImg}}' wx:key='{{index}}'>
+    <image class='manage-img' mode='aspectFit' src='{{item.url}}'></image>
+    <icon type="clear" size="20" class='manage-icon' 
+    data-id='{{item._id}}'
+    data-dbname='banner'
+    bindtap='deleteImg'/>
+  </view>
+  <button bindtap='uploadBanner' type='primary'>上传banner图片</button>
+  <view class='manage-title'>Swiper</view>
+  <view  class='manage-img-wrapper' wx:for='{{swiperImg}}' wx:key='{{index}}'>
+    <image class='manage-img' mode='aspectFit' src='{{item.url}}'></image>
+    <icon type="clear" size="20" class='manage-icon' 
+    data-id='{{item._id}}'
+    data-dbname='swiper'
+    bindtap='deleteImg'/>
+  </view>
+  <button bindtap='uploadSwiper' type='primary'>上传Swiper图片</button>
+  <view class='manage-title'>album</view>
+  <view  class='manage-img-wrapper' wx:for='{{albumImg}}' wx:key='{{index}}'>
+    <image class='manage-img' mode='aspectFit' src='{{item.url}}'></image>
+    <icon type="clear" size="20" class='manage-icon' 
+    data-id='{{item._id}}'
+    data-dbname='album'
+    bindtap='deleteImg'/>
+  </view>
+  <button bindtap='uploadAlbum' type='primary'>上传album图片</button>
+</view>

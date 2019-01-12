@@ -1,0 +1,71 @@
+<!--miniprogram/pages/message/message.wxml-->
+<view class="message">
+        <scroll-view
+            scroll-y
+            bindscroll="scroll"
+            class="box"
+        >
+            <view class="place"></view>
+            <view class="item-wrapper {{item.isTouchMove ?   'touch-move-active' : ''}}"
+            bindtouchstart="touchstart" bindtouchmove="touchmove"
+            data-index="{{index}}
+             wx:for="{{messageList}}" wx:key="index">
+              <view class="item-inner">
+                <image class="left" src="{{item.url}}"/>
+                <view class="right">
+                    <view class="top">
+                        <span class="top-l">{{item.name}}</span>
+                        <span class="top-r">{{item.time}}</span>
+                    </view>
+                    <view class="con">{{item.desc}}</view>
+                </view>
+              </view>
+              <view class='del touch-move-active' data-id="{{item._id}}" bindtap='delete'>删除</view>
+            </view>
+            <!-- <view class="item" wx:for="{{messageList}}" wx:key="index">
+                <image class="left" src="{{item.url}}"/>
+                <view class="right">
+                    <view class="top">
+                        <span class="top-l">{{item.name}}</span>
+                        <span class="top-r">{{item.time}}</span>
+                    </view>
+                    <view class="con">{{item.desc}}</view>
+                </view>
+            </view> -->
+            <view class="place-end"></view>
+        </scroll-view>
+        <view class="bottom">
+            <button class="left" lang="zh_CN" 
+            open-type="getUserInfo"
+             bindgetuserinfo="toMessage">说点啥吧</button>
+            <button class="right" bindtap="toForm">我要出席</button> 
+        </view>
+        <view class="dialog" wx:if="{{isOpen}}">
+            <textarea focus="true" maxlength="80" class="desc" placeholder="在这里输入您想要说的话" name="textarea" 
+            bindinput='inputDesc'
+            placeholder-style="color:#ccc;" value="{{desc}}"/>
+            <view class="btn">
+                <button class="left" bindtap="sendMessage">发送留言</button>
+                <button class="right" bindtap="cancel">取消</button>
+            </view>
+        </view>
+        <view class="video-dialog" bindtap="toVideo">
+            <image src="/images/video1.png"/>
+        </view>
+        <view class="form-dialog" bindtap="lookList">
+            <image src="/images/form.png"/>
+        </view>
+         <view class="form" wx:if="{{isForm}}">
+            <h-form 
+            bindcloseForm="closeForm"                     bindgetFromlist="getFromlist"></h-form> 
+        </view>
+        <!-- <view class="video" v-show="isVideo">
+            <h-video @closeVideo="closeVideo"></h-video>
+        </view>-->
+       
+        <view class="form-list" wx:if="{{isFormlist}}">
+            <h-form-list bindcloseFormlist="closeFormlist" 
+            flag='{{flag}}'
+            formList="{{formList}}"></h-form-list>
+        </view>
+    </view>
