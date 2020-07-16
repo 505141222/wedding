@@ -1,5 +1,0 @@
-<!--miniprogram/pages/chooseManage/index.wxml-->
-<button type='primary' class='choose-button' bindtap='goToPhoto'>管理图片</button>
-<button type='primary' class='choose-button'  bindtap='goToInfo'>管理信息</button>
-<!-- <button type='primary' class='choose-button'  bindtap='chooseMusic'>上传音乐</button> -->
-

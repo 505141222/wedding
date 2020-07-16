@@ -1,5 +1,0 @@
-<view>
-  <view class='title'>请输入密码</view>
-  <input class='name-input password' value='{{password}}' bindinput='inputPassword'></input> 
-  <button type='primary' bindtap='beManager'>获取管理员权限</button>
-</view>

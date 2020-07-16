@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "留言评论",
-  "usingComponents": {
-    "h-form": "/components/form/index",
-    "h-form-list": "/components/formList/index"
-  },
-  "disableScroll": true
-}

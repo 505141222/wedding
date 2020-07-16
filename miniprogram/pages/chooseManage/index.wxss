@@ -1,4 +1,0 @@
-/* miniprogram/pages/chooseManage/index.wxss */
-.choose-button {
-  margin-top: 30rpx;
-}
