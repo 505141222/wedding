@@ -1,0 +1,26 @@
+<!--components/formList/index.wxml-->
+<wxs module="m1">
+  var handle = function(num) { 
+    var phone = num + ''
+    return phone.substring(0,3) + '****' + phone.substring(7,11) 
+   } 
+  module.exports.handle = handle;
+</wxs>
+<view>
+  <scroll-view class="formlist" scroll-y>
+      <view class="item" wx:for="{{formList}}" wx:key="{{index}}">
+          <view class="item-top">
+              <span class="left item-span">{{item.name}}</span>
+              <span class="right item-span" wx:if='{{!flag}}'>{{m1.handle(item.phone)}}</span>
+              <span class="right item-span" wx:if='{{flag}}'>{{item.phone}}</span>
+          </view>
+          <view class="item-middle">
+              <view class="address">
+                  <span class='item-span'>{{item.count}}</span>
+                  <span  class='item-span' wx:if="{{item.desc}}">备注：{{item.desc}}</span>
+              </view>
+          </view>
+      </view>
+  </scroll-view>
+  <image class='formlist-img' src="/images/close1.png" bindtap="close"/>
+</view>
